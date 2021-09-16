@@ -1,7 +1,14 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "tailwindcss/tailwind.css";
+import type { AppProps } from "next/app";
+import Layout from "../components/Layout";
+import ScrollToTop from "../components/ScrollToTop";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+      <ScrollToTop></ScrollToTop>
+    </Layout>
+  );
 }
-export default MyApp
+export default MyApp;
